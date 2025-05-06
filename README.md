@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuilTreina
 
-## Getting Started
+Uma plataforma inteligente que combina IA generativa, assistente por voz e dados em tempo real para criar treinos e dietas personalizados, com base no seu perfil físico e metas de saúde.
 
-First, run the development server:
+### 🌞 Preview do Projeto
+
+![Preview do Projeto - Desktop](/public/image-app-1.png)
+
+![Preview do Projeto - Tablet](/public/image-app-2.png)
+
+## ✨ Funcionalidades
+
+-🎙️ **Assistente de Voz com IA (Vapi)**: converse com a IA sobre seus objetivos, rotina e limitações
+-🧠 **Integração com LLM (Gemini AI)**: gera planos personalizados de treino e dieta
+-🏋️ **Planos de Treino Personalizados**: com base no seu nível, histórico de lesões e preferências
+-🥗 **Recomendações Alimentares**: levando em conta alergias e restrições alimentares
+-🔒 **Autenticação Segura com Clerk**: login via GitHub, Google ou e-mail/senha
+-💾 **Gerenciamento de Programas**: mantenha vários planos e ative o mais recente
+-🎯 **Design Moderno**: interface elegante
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js 15** - Framework React moderno com suporte a SSR e rotas inteligentes
+- **React 19** - Biblioteca para construção de interfaces
+- **TypeScript** - Superset tipado de JavaScript
+- **TailwindCSS + Shadcn UI** - Estilização rápida e elegante com componentes reutilizáveis
+- **Clerk** - Autenticação e gerenciamento de usuários
+- **Vapi.ai** - Plataforma de assistente por voz em tempo real
+- **Gemini AI** - LLM para geração de conteúdo e recomendações
+- **Convex** - Banco de dados reativo e em tempo real
+
+## 📋 Pré-requisitos
+
+- Node.js 18.17.0 ou superior
+- npm, yarn, pnpm ou bun
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/QuiLion7/quiltreina.git
+cd quiltreina
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+# ou
+bun install
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Configure as variáveis de ambiente no .env:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Clerk URLs
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-## Learn More
+# Vapi Voice AI
+NEXT_PUBLIC_VAPI_WORKFLOW_ID=
+NEXT_PUBLIC_VAPI_API_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+# Convex Database
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Inicie o servidor de desenvolvimento:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+6. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Estrutura do Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+quiltreina/
+├── app/                  # Rotas e páginas da aplicação
+├── components/           # Componentes reutilizáveis
+├── lib/                  # Funções utilitárias e API
+├── public/               # Arquivos estáticos
+├── styles/               # Estilos globais
+└── types/                # Definições de tipos TypeScript
+```
+
+## 📱 Recursos de Acessibilidade
+
+- Design responsivo
+- HTML semântico para melhor acessibilidade
+- Feedback visual e textual para ações
+
+## 🌐 Deployment
+
+A aplicação pode ser facilmente implantada na [Vercel](https://vercel.com) ou qualquer outra plataforma que suporte Next.js.
+
+```bash
+npm run build
+# ou
+yarn build
+# ou
+pnpm build
+# ou
+bun build
+```
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👨‍💻 Autor
+
+**Quilion Oliveira**
+
+- Github: [QuiLion7](https://github.com/QuiLion7)
+- LinkedIn: [quilion7](https://www.linkedin.com/in/quilion7/)
