@@ -7,7 +7,6 @@ export default defineSchema({
     email: v.string(),
     image: v.optional(v.string()),
     clerkId: v.string(),
-    remainingGenerations: v.number(),
   }).index("by_clerk_id", ["clerkId"]),
 
   plans: defineTable({

@@ -39,21 +39,6 @@ export const createPlan = mutation({
     isActive: v.boolean(),
   },
   handler: async (ctx, args) => {
-    const user = await ctx.db
-      .query("users")
-      .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.userId))
-      .unique();
-
-    if (!user) throw new Error("Usuário não encontrado");
-    if (user.remainingGenerations <= 0) {
-      throw new Error("Você atingiu seu limite de gerações. Volte amanhã!");
-    }
-
-    // Decrementar contador
-    await ctx.db.patch(user._id, {
-      remainingGenerations: user.remainingGenerations - 1,
-    });
-
     const activePlans = await ctx.db
       .query("plans")
       .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
@@ -80,17 +65,5 @@ export const getUserPlans = query({
       .collect();
 
     return plans;
-  },
-});
-
-export const getRemainingGenerations = query({
-  args: { userId: v.string() },
-  handler: async (ctx, args) => {
-    const user = await ctx.db
-      .query("users")
-      .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.userId))
-      .unique();
-
-    return user?.remainingGenerations || 0;
   },
 });
