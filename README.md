@@ -11,11 +11,17 @@ Uma plataforma inteligente que combina IA generativa, assistente por voz e dados
 ## ✨ Funcionalidades
 
 -🎙️ **Assistente de Voz com IA (Vapi)**: converse com a IA sobre seus objetivos, rotina e limitações
+
 -🧠 **Integração com LLM (Gemini AI)**: gera planos personalizados de treino e dieta
+
 -🏋️ **Planos de Treino Personalizados**: com base no seu nível, histórico de lesões e preferências
+
 -🥗 **Recomendações Alimentares**: levando em conta alergias e restrições alimentares
+
 -🔒 **Autenticação Segura com Clerk**: login via GitHub, Google ou e-mail/senha
+
 -💾 **Gerenciamento de Programas**: mantenha vários planos e ative o mais recente
+
 -🎯 **Design Moderno**: interface elegante
 
 ## 🛠️ Tecnologias Utilizadas
